@@ -44,20 +44,112 @@ class MyApp extends StatelessWidget {
                   ),
                 ],
               ),
-              MyCard(),
-              Container(
-                child: Expanded(
+              Stack(
+                children: [
+                  Container(
+                    child: Card(
+                      margin: EdgeInsets.only(
+                          top: 20, left: 10, right: 10, bottom: 15),
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(20)),
+                      color: Color.fromARGB(255, 219, 246, 41),
+                      child: Container(
+                        padding: EdgeInsets.all(20),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Image.asset(
+                                  "Assets/scanner.jpg",
+                                  width: 35,
+                                  height: 35,
+                                ),
+                                Text(
+                                  "DS Bank",
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.w900,
+                                      fontSize: 20),
+                                )
+                              ],
+                            ),
+                            SizedBox(
+                              height: 50,
+                            ),
+                            Row(
+                              children: [
+                                Text(
+                                  "Balance",
+                                  style: TextStyle(color: Colors.grey),
+                                ),
+                                Image.asset(
+                                  "Assets/view.png",
+                                  width: 10,
+                                  height: 10,
+                                ),
+                              ],
+                            ),
+                            SizedBox(
+                              height: 10,
+                            ),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Text(
+                                  "\$24,098.00",
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.w900,
+                                      fontSize: 30),
+                                ),
+                                Text(
+                                  "VISA",
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.w900,
+                                      fontSize: 30),
+                                ),
+                              ],
+                            )
+                          ],
+                        ),
+                      ),
+                    ),
+                  ),
+                  Positioned(
+                    left: 10,
+                    right: 10,
+                    bottom: 0,
+                    top: 80,
                     child: Container(
-                  margin:
-                      EdgeInsets.only(top: 0, left: 10, right: 10, bottom: 5),
-                  padding: EdgeInsets.all(5),
-                  decoration: BoxDecoration(
-                      color: Colors.black,
-                      borderRadius: BorderRadius.only(
-                          bottomLeft: Radius.circular(40),
-                          bottomRight: Radius.circular(40))),
-                )),
+                      margin: EdgeInsets.only(
+                          left: 3, right: 3, bottom: 0, top: 10),
+                      padding: EdgeInsets.only(
+                          left: 10, right: 10, top: 30, bottom: 40),
+                      decoration: BoxDecoration(
+                          color: Colors.black,
+                          borderRadius: BorderRadius.only(
+                              topLeft: Radius.circular(40),
+                              topRight: Radius.circular(40),
+                              bottomLeft: Radius.circular(40),
+                              bottomRight: Radius.circular(40))),
+                    ),
+                  )
+                ],
               )
+
+              // Container(
+              //   child: Expanded(
+              //       child: Container(
+              //     margin:
+              //         EdgeInsets.only(top: 0, left: 10, right: 10, bottom: 5),
+              //     padding: EdgeInsets.all(5),
+              //     decoration: BoxDecoration(
+              //         color: Colors.black,
+              //         borderRadius: BorderRadius.only(
+              //             bottomLeft: Radius.circular(40),
+              //             bottomRight: Radius.circular(40))),
+              //   )),
+              // )
             ],
           ),
         ),
@@ -76,66 +168,66 @@ class MyCard extends StatelessWidget {
         Navigator.push(
             context, MaterialPageRoute(builder: (context) => Page2()));
       },
-      child: Card(
-        margin: EdgeInsets.only(top: 20, left: 10, right: 10, bottom: 15),
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
-        color: Color.fromARGB(255, 219, 246, 41),
-        child: Container(
-          padding: EdgeInsets.all(20),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Image.asset(
-                    "Assets/scanner.jpg",
-                    width: 35,
-                    height: 35,
-                  ),
-                  Text(
-                    "DS Bank",
-                    style: TextStyle(fontWeight: FontWeight.w900, fontSize: 20),
-                  )
-                ],
-              ),
+      // child: Card(
+      //   margin: EdgeInsets.only(top: 20, left: 10, right: 10, bottom: 15),
+      //   shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+      //   color: Color.fromARGB(255, 219, 246, 41),
+      //   child: Container(
+      //     padding: EdgeInsets.all(20),
+      //     child: Column(
+      //       crossAxisAlignment: CrossAxisAlignment.start,
+      //       children: [
+      //         Row(
+      //           mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      //           children: [
+      //             Image.asset(
+      //               "Assets/scanner.jpg",
+      //               width: 35,
+      //               height: 35,
+      //             ),
+      //             Text(
+      //               "DS Bank",
+      //               style: TextStyle(fontWeight: FontWeight.w900, fontSize: 20),
+      //             )
+      //           ],
+      //         ),
 
-              SizedBox(
-                height: 50,
-              ),
-              Row(
-                children: [
-                  Text(
-                    "Balance",
-                    style: TextStyle(color: Colors.grey),
-                  ),
-                  Image.asset(
-                    "Assets/view.png",
-                    width: 10,
-                    height: 10,
-                  ),
-                ],
-              ),
-              SizedBox(
-                height: 10,
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text(
-                    "\$24,098.00",
-                    style: TextStyle(fontWeight: FontWeight.w900, fontSize: 30),
-                  ),
-                  Text(
-                    "VISA",
-                    style: TextStyle(fontWeight: FontWeight.w900, fontSize: 30),
-                  ),
-                ],
-              )
-            ],
-          ),
-        ),
-      ),
+      //         SizedBox(
+      //           height: 50,
+      //         ),
+      //         Row(
+      //           children: [
+      //             Text(
+      //               "Balance",
+      //               style: TextStyle(color: Colors.grey),
+      //             ),
+      //             Image.asset(
+      //               "Assets/view.png",
+      //               width: 10,
+      //               height: 10,
+      //             ),
+      //           ],
+      //         ),
+      //         SizedBox(
+      //           height: 10,
+      //         ),
+      //         Row(
+      //           mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      //           children: [
+      //             Text(
+      //               "\$24,098.00",
+      //               style: TextStyle(fontWeight: FontWeight.w900, fontSize: 30),
+      //             ),
+      //             Text(
+      //               "VISA",
+      //               style: TextStyle(fontWeight: FontWeight.w900, fontSize: 30),
+      //             ),
+      //           ],
+      //         )
+      //       ],
+      //     ),
+      //   ),
+      // ),
     );
   }
 }
