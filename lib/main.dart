@@ -50,7 +50,7 @@ class MyApp extends StatelessWidget {
                     margin: EdgeInsets.only(
                         left: 10, right: 10, bottom: 5, top: 20),
                     padding: EdgeInsets.only(
-                        left: 10, right: 10, top: 250, bottom: 50),
+                        left: 10, right: 10, top: 215, bottom: 80),
                     decoration: BoxDecoration(
                         color: Colors.black,
                         borderRadius: BorderRadius.only(
@@ -58,6 +58,23 @@ class MyApp extends StatelessWidget {
                             topRight: Radius.circular(20),
                             bottomLeft: Radius.circular(40),
                             bottomRight: Radius.circular(40))),
+                    child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text(
+                                textAlign: TextAlign.justify,
+                                "Send Money to",
+                                style: TextStyle(
+                                    fontWeight: FontWeight.w500,
+                                    color: Colors.white,
+                                    fontSize: 17),
+                              )
+                            ],
+                          ),
+                        ]),
                   ),
                   Container(
                     child: Card(
