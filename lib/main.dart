@@ -71,7 +71,19 @@ class MyApp extends StatelessWidget {
                                     fontWeight: FontWeight.w500,
                                     color: Colors.white,
                                     fontSize: 17),
-                              )
+                              ),
+                              Container(
+                                padding: EdgeInsets.only(
+                                    left: 15, right: 10, top: 20, bottom: 15),
+                                decoration: BoxDecoration(
+                                    color: Color.fromARGB(255, 234, 162, 246),
+                                    borderRadius: BorderRadius.only()),
+                                child: Icon(
+                                  Icons.search,
+                                  color: Colors.black,
+                                  size: 30,
+                                ),
+                              ),
                             ],
                           ),
                         ]),
