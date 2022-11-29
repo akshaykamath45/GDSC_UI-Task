@@ -47,6 +47,19 @@ class MyApp extends StatelessWidget {
               Stack(
                 children: [
                   Container(
+                    margin: EdgeInsets.only(
+                        left: 10, right: 10, bottom: 5, top: 20),
+                    padding: EdgeInsets.only(
+                        left: 10, right: 10, top: 250, bottom: 50),
+                    decoration: BoxDecoration(
+                        color: Colors.black,
+                        borderRadius: BorderRadius.only(
+                            topLeft: Radius.circular(20),
+                            topRight: Radius.circular(20),
+                            bottomLeft: Radius.circular(40),
+                            bottomRight: Radius.circular(40))),
+                  ),
+                  Container(
                     child: Card(
                       margin: EdgeInsets.only(
                           top: 20, left: 10, right: 10, bottom: 15),
@@ -115,25 +128,6 @@ class MyApp extends StatelessWidget {
                       ),
                     ),
                   ),
-                  Positioned(
-                    left: 10,
-                    right: 10,
-                    bottom: 0,
-                    top: 80,
-                    child: Container(
-                      margin: EdgeInsets.only(
-                          left: 3, right: 3, bottom: 0, top: 10),
-                      padding: EdgeInsets.only(
-                          left: 10, right: 10, top: 30, bottom: 40),
-                      decoration: BoxDecoration(
-                          color: Colors.black,
-                          borderRadius: BorderRadius.only(
-                              topLeft: Radius.circular(40),
-                              topRight: Radius.circular(40),
-                              bottomLeft: Radius.circular(40),
-                              bottomRight: Radius.circular(40))),
-                    ),
-                  )
                 ],
               )
 
