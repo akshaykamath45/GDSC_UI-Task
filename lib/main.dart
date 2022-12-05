@@ -50,31 +50,36 @@ class MyApp extends StatelessWidget {
                     margin: EdgeInsets.only(
                         left: 10, right: 10, bottom: 5, top: 20),
                     padding: EdgeInsets.only(
-                        left: 10, right: 10, top: 215, bottom: 80),
+                        left: 10, right: 10, top: 180, bottom: 20),
                     decoration: BoxDecoration(
                         color: Colors.black,
                         borderRadius: BorderRadius.only(
                             topLeft: Radius.circular(20),
                             topRight: Radius.circular(20),
-                            bottomLeft: Radius.circular(40),
-                            bottomRight: Radius.circular(40))),
+                            bottomLeft: Radius.circular(30),
+                            bottomRight: Radius.circular(30))),
                     child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                              Text(
-                                textAlign: TextAlign.justify,
-                                "Send Money to",
-                                style: TextStyle(
-                                    fontWeight: FontWeight.w500,
-                                    color: Colors.white,
-                                    fontSize: 17),
+                              Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Text(
+                                  textAlign: TextAlign.justify,
+                                  "Send Money to",
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.w500,
+                                      color: Colors.white,
+                                      fontSize: 17),
+                                ),
                               ),
                               Container(
                                 padding: EdgeInsets.only(
-                                    left: 15, right: 10, top: 20, bottom: 15),
+                                    left: 10, right: 10, top: 20, bottom: 20),
+                                margin: EdgeInsets.only(
+                                    left: 15, right: 15, bottom: 5, top: 25),
                                 decoration: BoxDecoration(
                                     color: Color.fromARGB(255, 234, 162, 246),
                                     borderRadius: BorderRadius.only()),
@@ -86,6 +91,79 @@ class MyApp extends StatelessWidget {
                               ),
                             ],
                           ),
+                          // SizedBox(
+                          //   height: 5,
+                          // ),
+                          Row(
+                            children: [
+                              Stack(
+                                children: [
+                                  Padding(
+                                    padding: const EdgeInsets.only(left: 8),
+                                    child: Container(
+                                      child: CircleAvatar(
+                                        backgroundImage:
+                                            AssetImage("Assets/image1.jpg"),
+                                        radius: 20,
+                                      ),
+                                    ),
+                                  ),
+                                  Padding(
+                                    padding: const EdgeInsets.only(
+                                      left: 40,
+                                      right: 5,
+                                    ),
+                                    child: Container(
+                                      child: CircleAvatar(
+                                        backgroundImage:
+                                            AssetImage("Assets/image2.jpg"),
+                                        radius: 20,
+                                      ),
+                                    ),
+                                  ),
+                                  Padding(
+                                    padding: const EdgeInsets.only(
+                                      left: 65,
+                                      right: 10,
+                                    ),
+                                    child: Container(
+                                      child: CircleAvatar(
+                                        backgroundImage:
+                                            AssetImage("Assets/image3.jpg"),
+                                        radius: 20,
+                                      ),
+                                    ),
+                                  ),
+                                  Padding(
+                                    padding: const EdgeInsets.only(
+                                      left: 90,
+                                      right: 5,
+                                    ),
+                                    child: Container(
+                                      child: CircleAvatar(
+                                        backgroundImage:
+                                            AssetImage("Assets/image4.jpg"),
+                                        radius: 20,
+                                      ),
+                                    ),
+                                  ),
+                                  Padding(
+                                    padding: const EdgeInsets.only(
+                                      left: 115,
+                                      right: 10,
+                                    ),
+                                    child: Container(
+                                      child: CircleAvatar(
+                                        backgroundImage:
+                                            AssetImage("Assets/image5.jpg"),
+                                        radius: 20,
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ],
+                          )
                         ]),
                   ),
                   Container(
@@ -158,21 +236,60 @@ class MyApp extends StatelessWidget {
                     ),
                   ),
                 ],
+              ),
+              SizedBox(
+                height: 30,
+              ),
+              Padding(
+                padding: const EdgeInsets.only(left: 15),
+                child: Row(
+                  children: [
+                    Text(
+                      "Amount",
+                      style:
+                          TextStyle(fontWeight: FontWeight.w900, fontSize: 17),
+                    )
+                  ],
+                ),
+              ),
+              SizedBox(
+                height: 5,
+              ),
+              Padding(
+                padding: const EdgeInsets.all(8),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.only(left: 8.0),
+                      child: Text(
+                        "500.00 USD",
+                        style: TextStyle(
+                            fontWeight: FontWeight.w900, fontSize: 25),
+                      ),
+                    ),
+                    Container(
+                      margin: EdgeInsets.fromLTRB(10, 5, 25, 5),
+                      padding: EdgeInsets.only(
+                          right: 20, left: 20, top: 5, bottom: 5),
+                      decoration: BoxDecoration(
+                          color: Color.fromARGB(255, 219, 246, 41),
+                          borderRadius: BorderRadius.only()),
+                      child: Icon(
+                        Icons.arrow_forward,
+                        color: Colors.black,
+                        size: 30,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              Divider(
+                indent: 20,
+                color: Color.fromARGB(198, 160, 157, 160),
+                endIndent: 20,
+                thickness: 2,
               )
-
-              // Container(
-              //   child: Expanded(
-              //       child: Container(
-              //     margin:
-              //         EdgeInsets.only(top: 0, left: 10, right: 10, bottom: 5),
-              //     padding: EdgeInsets.all(5),
-              //     decoration: BoxDecoration(
-              //         color: Colors.black,
-              //         borderRadius: BorderRadius.only(
-              //             bottomLeft: Radius.circular(40),
-              //             bottomRight: Radius.circular(40))),
-              //   )),
-              // )
             ],
           ),
         ),
