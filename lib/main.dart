@@ -81,8 +81,10 @@ class MyApp extends StatelessWidget {
                                 margin: EdgeInsets.only(
                                     left: 15, right: 15, bottom: 5, top: 25),
                                 decoration: BoxDecoration(
-                                    color: Color.fromARGB(255, 234, 162, 246),
-                                    borderRadius: BorderRadius.only()),
+                                  color: Color.fromARGB(255, 234, 162, 246),
+                                  borderRadius:
+                                      BorderRadius.all(Radius.circular(10)),
+                                ),
                                 child: Icon(
                                   Icons.search,
                                   color: Colors.black,
@@ -271,10 +273,11 @@ class MyApp extends StatelessWidget {
                     Container(
                       margin: EdgeInsets.fromLTRB(10, 5, 25, 5),
                       padding: EdgeInsets.only(
-                          right: 20, left: 20, top: 5, bottom: 5),
+                          right: 25, left: 25, top: 5, bottom: 5),
                       decoration: BoxDecoration(
-                          color: Color.fromARGB(255, 219, 246, 41),
-                          borderRadius: BorderRadius.only()),
+                        color: Color.fromARGB(255, 219, 246, 41),
+                        borderRadius: BorderRadius.all(Radius.circular(10)),
+                      ),
                       child: Icon(
                         Icons.arrow_forward,
                         color: Colors.black,
